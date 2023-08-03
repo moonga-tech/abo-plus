@@ -2,112 +2,180 @@ import Image from 'next/image'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
+    <>
+      <header className="header-nav">
+        <nav className="flex justify-between p-7 px-28">
+          <div className="logo">
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
+              className="relative"
+              src="/images/logo.jpg"
+              alt="Logo"
+              width={60}
+              height={60}
               priority
             />
-          </a>
+          </div>
+          <div className="nav-button">
+            <button type="button" className="mx-8 rounded-sm px-5 border border-white py-2">Language</button>
+            <button type="button" className="px-5 rounded-sm border border-red-600 bg-red-600 py-2">Sign In</button>
+          </div>
+        </nav>
+        <div className="header-desciption text-center w-full">
+          <h1 className="text-6xl font-semibold">Unlimited movies, TV show and more.</h1>
+          <h3 className="text-xl my-2">Watch anything, anytime.</h3>
+          <p className="my-3">Ready to watch? Enter your email to create or restart your membership.</p>
+          <form action="/" method="post">
+            {/* <input className="focus:ring-red-400 focus:outline-none appearance-none text-sm leading-6 text-slate-900 placeholder-slate-400 py-2 pl-5 ring-1 ring-slate-200 shadow-sm" type="email" aria-label="Email projects" placeholder="Email Address" /> */}
+            <input type="email" name="email" id="email" className="py-2 pl-3 w-2/5 focus:ring-red-400 focus:outline-none appearance-none text-slate-900 placeholder-slate-400" placeholder="Email address" required/>
+            <button type="submit" className="p-2 px-5 bg-red-600">Get Started</button>
+          </form>
+        </div>
+      </header>
+      <div className="features">
+        <div className="row-one">
+          <div className="text-col">
+            <h1 className="text-5xl font-semibold">Enjoy on your TV.</h1>
+            <p className="pt-5">Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
+          </div>
+          <div className="img-col">
+          <Image
+              src="/images/features/1.jpg"
+              alt="Logo"
+              width={200}
+              height={200}
+              priority
+            />
+          </div>
+        </div>
+        <div className="row-two">
+          <div className="text-col">
+            <h1 className="text-5xl font-semibold">Enjoy on your TV.</h1>
+            <p className="pt-5">Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
+          </div>
+          <div className="img-col">
+            <Image
+                src="/images/features/2.jpg"
+                alt="Logo"
+                width={200}
+                height={200}
+                priority
+              />
+          </div>
+        </div>
+        <div className="row-three">
+          <div className="text-col">
+              <h1 className="text-5xl font-semibold">Enjoy on your TV.</h1>
+              <p className="pt-5">Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
+            </div>
+            <div className="img-col">
+            <Image
+                src="/images/features/3.jpg"
+                alt="Logo"
+                width={200}
+                height={200}
+                priority
+              />
+            </div>
+        </div>
+        <div className="row-four">
+          <div className="text-col">
+              <h1 className="text-5xl font-semibold">Enjoy on your TV.</h1>
+              <p className="pt-5">Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
+            </div>
+            <div className="img-col">
+            <Image
+                src="/images/features/4.jpg"
+                alt="Logo"
+                width={200}
+                height={200}
+                priority
+              />
+            </div>
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <h1 className="font-semibold text-3xl text-center">Frequently Asked Questions</h1>
+      <ul className="accordion">
+        <li>
+          <input type="radio" name="accordion" id="first" />
+          <label htmlFor="first">What is ABO Plus?</label>
+          <div className="content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia totam vero est molestias consectetur praesentium libero officia exercitationem possimus vitae, fuga facilis at commodi, expedita maiores, doloremque dolor placeat. Aliquam!</p>
+          </div>
+        </li>
+        <li>
+          <input type="radio" name="accordion" id="secord" />
+          <label htmlFor="secord">How much does ABO plus cost?</label>
+          <div className="content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia totam vero est molestias consectetur praesentium libero officia exercitationem possimus vitae, fuga facilis at commodi, expedita maiores, doloremque dolor placeat. Aliquam!</p>
+          </div>
+        </li>
+        <li>
+          <input type="radio" name="accordion" id="third" />
+          <label htmlFor="third">Where can I watch?</label>
+          <div className="content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia totam vero est molestias consectetur praesentium libero officia exercitationem possimus vitae, fuga facilis at commodi, expedita maiores, doloremque dolor placeat. Aliquam!</p>
+          </div>
+        </li>
+        <li>
+          <input type="radio" name="accordion" id="fourth" />
+          <label htmlFor="fourth">How do I cancel?</label>
+          <div className="content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia totam vero est molestias consectetur praesentium libero officia exercitationem possimus vitae, fuga facilis at commodi, expedita maiores, doloremque dolor placeat. Aliquam!</p>
+          </div>
+        </li>
+        <li>
+          <input type="radio" name="accordion" id="firth" />
+          <label htmlFor="firth">What can I watch on ABO Plus?</label>
+          <div className="content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia totam vero est molestias consectetur praesentium libero officia exercitationem possimus vitae, fuga facilis at commodi, expedita maiores, doloremque dolor placeat. Aliquam!</p>
+          </div>
+        </li>
+        <li>
+          <input type="radio" name="accordion" id="sixth" />
+          <label htmlFor="sixth">Is ABO Plus good for kids?</label>
+          <div className="content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia totam vero est molestias consectetur praesentium libero officia exercitationem possimus vitae, fuga facilis at commodi, expedita maiores, doloremque dolor placeat. Aliquam!</p>
+          </div>
+        </li>
+      </ul>
+      <div className="subscribe text-center mb-5">
+        <small class="text-lg">Ready to watch? Enter your email to create or restart your membership.</small>
+        <form action="/" method="post" className="mt-2">
+          {/* <input className="focus:ring-red-400 focus:outline-none appearance-none text-sm leading-6 text-slate-900 placeholder-slate-400 py-2 pl-5 ring-1 ring-slate-200 shadow-sm" type="email" aria-label="Email projects" placeholder="Email Address" /> */}
+          <input type="email" name="email" id="email" className="py-2 pl-3 w-2/5 focus:ring-red-400 focus:outline-none appearance-none text-slate-900 placeholder-slate-400" placeholder="Email address" required/>
+          <button type="submit" className="p-2 px-5 bg-red-600">Get Started</button>
+        </form>
       </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      <footer>
+        <h1 className="text-2xl font-semibold mb-6">Questions? call +250-09-78-90-88</h1>
+        <div className="row">
+          <div className="col">
+            <a href="">FAQ</a>
+            <a href="">Investor Relations</a>
+            <a href="">Privacy</a>
+            <a href="">Speed Test</a>
+          </div>
+          <div className="col">
+            <a href="">Help</a>
+            <a href="">Jobs</a>
+            <a href="">Cookies Preferences</a>
+            <a href="">Legal Notices</a>
+          </div>
+          <div className="col">
+            <a href="">Acoount</a>
+            <a href="">Ways to watch</a>
+            <a href="">Corporate Information</a>
+            <a href="">Only on ABO Plus</a>
+          </div>
+          <div className="col">
+            <a href="">Media Centre</a>
+            <a href="">Terms of Use</a>
+            <a href="">Contact Us</a>
+          </div>
+        </div>
+        <button type="submit" className="p-2 px-5 border border-white-900 color-white">English </button>
+        <p className="my-5">Netflix Zed</p>
+      </footer>
+    </>
   )
 }

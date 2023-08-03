@@ -24,4 +24,137 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  color: white;
+}
+*, body, label {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.header-nav {
+  background-image: url(/images/header.jpg);
+  min-height: 38em;
+  max-width: 100%;
+  background-color: rgb(78, 78, 78);
+  background-blend-mode: multiply;
+}
+.header-desciption {
+  position: absolute;
+  top: 40%;
+}
+.header-desciption h1 {
+  max-width: 50%;
+  margin: 0 auto;
+}
+/* --features-- */
+.features {
+  padding: 50px 12%;
+}
+.row-one, .row-two, .row-three, .row-four {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px 0;
+  flex-direction: row;
+  /* border-top: 4px solid gray;
+  border-bottom: 4px solid gray; */
+}
+.row-two, .row-four {
+  flex-direction: row-reverse;
+}
+.text-col {
+  flex-basis: 50%;
+  margin-top: 70px;
+}
+.img-col {
+  display: block;
+  max-width: 95%;
+  margin: auto;
+}
+/* --fAQ-- */
+.faq {
+  padding: 10px 12%;
+  text-align: center;
+  font-size: 18px;
+}
+.accordion {
+  margin: 60px auto;
+  width: 100%;
+  max-width: 750px;
+}
+.accordion li {
+  list-style: none;
+  width: 100%;
+  padding: 5px;
+}
+.accordion li label {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: #303030;
+  margin-bottom: 2px;
+  cursor: pointer;
+  position: relative;
+}
+label::after {
+  content: '+';
+  font-size: 34px;
+  position: absolute;
+  right: 20px;
+  top: 5px;
+  transition: transform 0.5s;
+}
+input[type="radio"] {
+  display: none;
+}
+.accordion .content {
+  background: #303030;
+  text-align: left;
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s, padding 0.5s;
+}
+.accordion input[type="radio"]:checked + label + .content {
+  max-height: 600px;
+  padding: 30px 20px;
+}
+.accordion input[type="radio"]:checked + label::after {
+  transform: rotate(135deg);
+}
+/* --footer-- */
+footer {
+  padding: 50px 15% 10px;
+  border-top: 6px solid #333;
+} 
+footer .row {
+  display: flex;
+  color: #777;
+}
+footer .col {
+  flex-basis: 25%;
+  flex-grow: 1;
+  margin-bottom: 20px;
+}
+footer .col a {
+  display: block;
+  text-decoration: none;
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+footer .row {
+  align-items: flex-start;
+  padding: 10px 0;
+}
+
+/* -- media query -- */
+@media only screen and (max-width: 600px) {
+  .logo {
+    width: 10em;
+  }
+  .header-nav {
+    min-height: 50em;
+  }
 }

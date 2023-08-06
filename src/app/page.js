@@ -49,8 +49,8 @@ export default function Home() {
         </div>
         <div className="row-two">
           <div className="text-col">
-            <h1 className="text-5xl font-semibold">Enjoy on your TV.</h1>
-            <p className="pt-5">Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
+            <h1 className="text-5xl font-semibold">Download your shows to watch offline</h1>
+            <p className="pt-5">Save your favorites easily and always have something to watch.</p>
           </div>
           <div className="img-col">
             <Image
@@ -64,8 +64,8 @@ export default function Home() {
         </div>
         <div className="row-three">
           <div className="text-col">
-              <h1 className="text-5xl font-semibold">Enjoy on your TV.</h1>
-              <p className="pt-5">Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
+              <h1 className="text-5xl font-semibold">Watch everywhere</h1>
+              <p className="pt-5">Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV</p>
             </div>
             <div className="img-col">
             <Image
@@ -79,8 +79,8 @@ export default function Home() {
         </div>
         <div className="row-four">
           <div className="text-col">
-              <h1 className="text-5xl font-semibold">Enjoy on your TV.</h1>
-              <p className="pt-5">Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
+              <h1 className="text-5xl font-semibold">Create profiles for kids</h1>
+              <p className="pt-5">Send kids on adventures with their favorite characters in a space made just for them—free with your membership.</p>
             </div>
             <div className="img-col">
             <Image
@@ -174,7 +174,7 @@ export default function Home() {
           </div>
         </div>
         <button type="submit" className="p-2 px-5 border border-white-900 color-white">English </button>
-        <p className="my-5">Netflix Zed</p>
+        <p className="my-5">ABO-Plus Zed</p>
       </footer>
     </>
   )

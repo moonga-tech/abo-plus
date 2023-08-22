@@ -15,6 +15,10 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+.down-icon {
+  width: 10px;
+  height: 10px;
+}
 
 body {
   color: rgb(var(--foreground-rgb));
@@ -130,10 +134,11 @@ footer {
 } 
 footer .row {
   display: flex;
+  flex-wrap: wrap;
   color: #777;
 }
 footer .col {
-  flex-basis: 25%;
+  flex-basis: 20%;
   flex-grow: 1;
   margin-bottom: 20px;
 }
@@ -150,11 +155,69 @@ footer .row {
 }
 
 /* -- media query -- */
-@media only screen and (max-width: 600px) {
-  .logo {
-    width: 10em;
+@media only screen and (max-width: 700px) {
+  .nav {
+    padding: 20px;
   }
-  .header-nav {
-    min-height: 50em;
+  .logo img {
+    width: 50px;
+  }
+  .nav-button .lg-btn {
+    padding: 5px 10px
+  }
+  .nav-button button {
+    padding: 5px 6px;
+  }
+  .nav-button .lg-btn {
+    padding: 4px 8px;
+  }
+  .header-desciption h1 {
+    text-align: center;
+    max-width: 70%;
+    font-size: 2.5em;
+  }
+  .email-sub, .header-desciption > h3,p, .nav-button {
+    font-size: 12px;
+  }
+  /*  */
+  .text-col, .img-col {
+    flex-basis: 100%;
+    margin-top: 70px;
+    text-align: center;
+  }
+  .features h1 {
+    font-size: 30px;
+  }
+  .f-img {
+    margin: 0 auto;
+  }
+  .row-one, .row-two, .row-three, .row-four {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 0;
+    flex-direction: row;
+    /* border-top: 4px solid gray;
+    border-bottom: 4px solid gray; */
+  }
+  .row-two, .row-four {
+    flex-direction: row-reverse;
+  }
+  .h1-faq {
+    font-size: 20px;
+  } 
+  .accordion {
+    font-size: 14px;
+  }
+  .accordion li label {
+    font-size: 14px;
+    padding: 10px;
+  }
+  label::after {
+    font-size: 22px;
+    top: 3px;
+  }
+  footer .col {
+    flex-basis: 50%;
+    flex-grow: 1;
   }
 }

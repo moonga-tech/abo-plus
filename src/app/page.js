@@ -1,13 +1,15 @@
 import Image from 'next/image'
+import Head from 'next/head'
 
 export default function Home() {
   return (
     <>
+      <Head></Head>
       <header className="header-nav">
-        <nav className="flex justify-between p-7 px-28">
+        <nav className="flex justify-between p-7 px-20 nav">
           <div className="logo">
             <Image
-              className="relative"
+              className="relative logo-img"
               src="/images/logo.jpg"
               alt="Logo"
               width={60}
@@ -16,7 +18,7 @@ export default function Home() {
             />
           </div>
           <div className="nav-button">
-            <button type="button" className="mx-8 rounded-sm px-5 border border-white py-2">Language</button>
+            <button type="button" className="mr-5 rounded-sm px-2 border border-white py-2 lg-btn"><span className="flex">Language <img src="/images/down-icon.png" alt="down-icon" className='down-icon ml-2 mt-2'/></span></button>
             <button type="button" className="px-5 rounded-sm border border-red-600 bg-red-600 py-2">Sign In</button>
           </div>
         </nav>
@@ -24,7 +26,7 @@ export default function Home() {
           <h1 className="text-6xl font-semibold">Unlimited movies, TV show and more.</h1>
           <h3 className="text-xl my-2">Watch anything, anytime.</h3>
           <p className="my-3">Ready to watch? Enter your email to create or restart your membership.</p>
-          <form action="/" method="post">
+          <form action="/" method="post" className='email-sub'>
             {/* <input className="focus:ring-red-400 focus:outline-none appearance-none text-sm leading-6 text-slate-900 placeholder-slate-400 py-2 pl-5 ring-1 ring-slate-200 shadow-sm" type="email" aria-label="Email projects" placeholder="Email Address" /> */}
             <input type="email" name="email" id="email" className="py-2 pl-3 w-2/5 focus:ring-red-400 focus:outline-none appearance-none text-slate-900 placeholder-slate-400" placeholder="Email address" required/>
             <button type="submit" className="p-2 px-5 bg-red-600">Get Started</button>
@@ -39,6 +41,7 @@ export default function Home() {
           </div>
           <div className="img-col">
           <Image
+              className="f-img"
               src="/images/features/1.jpg"
               alt="Logo"
               width={200}
@@ -54,6 +57,7 @@ export default function Home() {
           </div>
           <div className="img-col">
             <Image
+                className="f-img"
                 src="/images/features/2.jpg"
                 alt="Logo"
                 width={200}
@@ -69,6 +73,7 @@ export default function Home() {
             </div>
             <div className="img-col">
             <Image
+                className="f-img"
                 src="/images/features/3.jpg"
                 alt="Logo"
                 width={200}
@@ -84,6 +89,7 @@ export default function Home() {
             </div>
             <div className="img-col">
             <Image
+                className="f-img"
                 src="/images/features/4.jpg"
                 alt="Logo"
                 width={200}
@@ -93,7 +99,7 @@ export default function Home() {
             </div>
         </div>
       </div>
-      <h1 className="font-semibold text-3xl text-center">Frequently Asked Questions</h1>
+      <h1 className="font-semibold text-3xl text-center h1-faq">Frequently Asked Questions</h1>
       <ul className="accordion">
         <li>
           <input type="radio" name="accordion" id="first" />
@@ -140,7 +146,7 @@ export default function Home() {
       </ul>
       <div className="subscribe text-center mb-5">
         <small class="text-lg">Ready to watch? Enter your email to create or restart your membership.</small>
-        <form action="/" method="post" className="mt-2">
+        <form action="/" method="post" className="mt-2 email-sub">
           {/* <input className="focus:ring-red-400 focus:outline-none appearance-none text-sm leading-6 text-slate-900 placeholder-slate-400 py-2 pl-5 ring-1 ring-slate-200 shadow-sm" type="email" aria-label="Email projects" placeholder="Email Address" /> */}
           <input type="email" name="email" id="email" className="py-2 pl-3 w-2/5 focus:ring-red-400 focus:outline-none appearance-none text-slate-900 placeholder-slate-400" placeholder="Email address" required/>
           <button type="submit" className="p-2 px-5 bg-red-600">Get Started</button>
@@ -173,7 +179,7 @@ export default function Home() {
             <a href="">Contact Us</a>
           </div>
         </div>
-        <button type="submit" className="p-2 px-5 border border-white-900 color-white">English </button>
+        <button type="button" className="rounded-sm px-2 border border-white py-2"><span className="flex">Language <img src="/images/down-icon.png" alt="down-icon" className='down-icon ml-2 mt-2'/></span></button>
         <p className="my-5">ABO-Plus Zed</p>
       </footer>
     </>
